@@ -1,0 +1,93 @@
+.App {
+    text-align: center;
+}
+
+.header {
+    background-color: #40078ab5;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
+}
+
+.colbtn {
+    margin-right: 20px;
+}
+
+.user-info {
+    margin-right: auto;
+}
+
+.user-name {
+    margin-right: 0.5rem;
+}
+
+.home-button {
+    /* background-color: #fff; */
+    /* color: #333; */
+    /* border: none; */
+    /* padding: 0.5rem 1rem; */
+    /* cursor: pointer; */
+    /* border-radius: 5px; */
+    /* height: 20px; */
+
+    margin-left: auto; 
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.home-button svg {
+    font-size: 22px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    float: left;
+    margin-left: 80px;
+}
+
+.calendar-container {
+    margin-bottom: 2rem;
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.square-component {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* .square-component .image-container { */
+    /* margin-bottom: 1rem; */
+    /* Add space between image and title */
+/* } */
+
+.square-component .square-image {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    /* Center align the image */
+}
+
+.square-component .square-title {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-size: large;
+}
