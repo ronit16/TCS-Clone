@@ -45,16 +45,16 @@ const Login = ({ setUserState }) => {
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(user);
-      axios.post("http://localhost:5001/login", user).then((res) => {
+      axios.post("http://localhost:5000/login", user).then((res) => {
         alert(res.data.message);
         setUserState(res.data.user);
-        navigate("/home", { replace: true });
+        navigate("/profile", { replace: true });
       });
     }
   }, [formErrors]);
   return (
     <div className={loginstyle.login}>
-      <form action='/home'>
+      <form action='/profile'>
         <h1>Login</h1>
         <input
           type="email"
