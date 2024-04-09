@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    
 }
 
 .header {
@@ -23,6 +24,7 @@
 .user-name {
     margin-right: 0.5rem;
 }
+
 
 .home-button {
     /* background-color: #fff; */
@@ -53,9 +55,34 @@
     margin-left: 80px;
 }
 
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+}
+
+
 .calendar-container {
     margin-bottom: 2rem;
+    margin-right: 70px;
+    max-width: 1000px;
 }
+
+.calendar-container .react-calendar {
+    width: 100%; /* Make the calendar fill the container width */
+    max-width: none; /* Override max-width */
+    height: 400px; /* Increase the height of the calendar */
+    border: 2px solid black; /* Add border */
+   
+}
+.calendar-container .react-calendar__tile:hover {
+    background-color: #40078ab5; /* Change background color of date on hover */
+    opacity: 0.5;
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+
+
 
 .sections {
     display: grid;

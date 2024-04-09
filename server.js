@@ -264,8 +264,8 @@ app.use(express.urlencoded({ extended: true }));
 const connection = mysql.createConnection({
   host: 'localhost', // Replace with your MySQL host
   user: 'root', // Replace with your MySQL username
-  password: '123456', // Replace with your MySQL password
-  database: 'tcs', // Replace with your MySQL database name
+  password: '1234', // Replace with your MySQL password
+  database: 'awt', // Replace with your MySQL database name
 });
 
 // Connect to MySQL database
@@ -348,9 +348,44 @@ app.get('/api/events', (req, res) => {
   });
 });
 
+app.get('/api/academics', (req, res) => {
+  connection.query('SELECT * FROM academics ORDER BY semester ASC;', (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An error occurred while fetching events' });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+app.get('/api/name', (req, res) => {
+  connection.query('SELECT fname FROM regdetails;', (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An error occurred while fetching events' });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+
 // Endpoint to fetch notices from MySQL
 app.get('/api/notice', (req, res) => {
-  connection.query('SELECT * FROM notice', (error, results) => {
+  connection.query('SELECT * FROM gennotice', (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: 'An error occurred while fetching notices' });
+    } else {
+      res.json(results);
+    }
+  });
+});
+
+// Endpoint to fetch achievements from MySQL
+app.get('/api/achievements', (req, res) => {
+  connection.query('SELECT * FROM achievements', (error, results) => {
     if (error) {
       console.error(error);
       res.status(500).json({ error: 'An error occurred while fetching notices' });

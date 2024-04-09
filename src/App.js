@@ -5,6 +5,10 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import Acadlist from "./components/Academics/Acadsql";
+import GenNotice from "./components/GenNotice/GenNotice";
+import AchiList from "./components/Achievements/achievements";
+import EventList from "./components/Event/eventsql";
 
 function App() {
   const [userstate, setUserState] = useState({});
@@ -17,6 +21,11 @@ function App() {
           <Route path="/login" element={<Login setUserState={setUserState} />}></Route>
           <Route path="/signup" element={<Register />}></Route>
           <Route path="/profile" element={<Testt/>}></Route>
+          <Route path="/academics" element={<Acadlist/>}></Route>
+          <Route path="/notice" element= {<GenNotice/>}></Route>
+          <Route path="/achievements" element={<AchiList/>}></Route>
+          <Route path="/events" element={<EventList/>}></Route>
+          
         </Routes>
       </Router>
     </div>

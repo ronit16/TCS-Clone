@@ -168,7 +168,7 @@ const EventList = () => {
             <RegisterLink href={event.registrationLink} target="_blank" rel="noopener noreferrer">
               Register
             </RegisterLink>
-          </EventItem>
+          </EventItem> 
         ))}
       </EventLists>
     </EventListContainer>
