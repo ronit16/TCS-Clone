@@ -105,6 +105,10 @@
 // export default GenNotice
 
 
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
@@ -197,9 +201,8 @@ const GenNotice = () => {
           notice.map((notice) => (
             <NoticeItem key={notice.id}>
               <NoticeName>{notice.name}</NoticeName>
-              <NoticeDate>Date: {formatDate(notice.start_date)}</NoticeDate>
-              <NoticeDate>Date: {formatDate(notice.end_date)}</NoticeDate>
-              <NoticeDescription>{notice.description}</NoticeDescription>
+              <NoticeDate>Date: {formatDate(notice.publishdt)}</NoticeDate>
+              <NoticeDescription>{notice.message}</NoticeDescription>
             </NoticeItem>
           ))
         ) : (
@@ -211,3 +214,8 @@ const GenNotice = () => {
 };
  
 export default GenNotice;
+
+
+
+
+
