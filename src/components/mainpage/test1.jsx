@@ -94,7 +94,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import CalendarComponent from '../Calendar/calendarcomp';
 
-function Testt() {
+function Testt( userstate ) {
+  // Access userstate data as needed
+  console.log(userstate);
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
@@ -110,7 +112,7 @@ function Testt() {
         throw new Error('Failed to fetch user info');
       }
       const data = await response.json();
-      console.log(typeof(data))
+      console.log('Response from API:', data);
       if (data && data.fname) {
         // Assuming the response contains an array of objects with a 'fname' property
         setUserInfo(data.fname);
@@ -130,7 +132,7 @@ function Testt() {
         <span className='colbtn'>🔴🟡🟢</span>
           {userInfo ? (
             <>
-              <span className="user-name">{userInfo.fname}</span>
+              <span className="user-name">{userInfo}</span>
               {/* <span className="user-id">ID: {userInfo.id}</span> */}
             </>
           ) : (
